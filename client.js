@@ -19,8 +19,9 @@ const connect = function (data) {
   //   setInterval(() => conn.write("Move: up"), 50)
   // })
   conn.setEncoding('utf8');
+  // console.log(conn)
   return conn;
 }
-
+// connect();
 
 module.exports = { connect };

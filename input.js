@@ -17,6 +17,13 @@ const handleUserInput = (key) => {
   if (key === 'a') {
     connection.write('Move: left');
   }
+  if (key === '1') {
+    connection.write('Say: Aw did u die?')
+  }
+  if (key === '2') {
+    connection.write('Say: why did u do that?')
+
+  }
 }
 const setupInput = function(conn) {
   connection = conn;
@@ -27,6 +34,7 @@ const setupInput = function(conn) {
   stdin.on("data", handleUserInput)
   return stdin;
 }
+
 
 
 module.exports = { setupInput };
